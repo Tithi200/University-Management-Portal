@@ -1,0 +1,541 @@
+/* Common ID Card Styles */
+.id-card {
+  width: 400px;
+  height: 250px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Template 1 - Classic Style */
+.template1 {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 3px solid #667eea;
+}
+
+.template1 .id-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+  margin-bottom: 1rem;
+}
+
+.template1 .college-logo {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template1 .college-info h2 {
+  color: #667eea;
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.template1 .college-info p {
+  color: #666;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.template1 .id-card-body {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.template1 .photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.template1 .photo-placeholder {
+  width: 80px;
+  height: 100px;
+  background: #f0f0f0;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.template1 .student-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template1 .photo-icon {
+  font-size: 2rem;
+  color: #999;
+}
+
+.template1 .student-id-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.template1 .details-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.template1 .detail-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.template1 .detail-row .label {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 90px;
+}
+
+.template1 .detail-row .value {
+  color: #333;
+  flex: 1;
+}
+
+.template1 .id-card-footer {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.template1 .signature-section {
+  text-align: right;
+}
+
+.template1 .signature-line {
+  width: 120px;
+  height: 1px;
+  background: #333;
+  margin-left: auto;
+  margin-bottom: 0.25rem;
+}
+
+.template1 .signature-section p {
+  font-size: 0.7rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Template 2 - Modern Card Style */
+.template2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.template2-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.template2-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.template2 .college-logo-large {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template2 .college-name-large h1 {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.template2 .id-badge-template2 {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.template2-body {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.template2-photo-container {
+  width: 90px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.template2 .student-photo-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template2 .photo-placeholder-large {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template2 .photo-icon-large {
+  font-size: 2.5rem;
+  opacity: 0.7;
+}
+
+.template2-info-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.template2 .info-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.template2 .info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.template2 .info-label {
+  font-size: 0.65rem;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.template2 .info-value {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.template2-footer {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+/* Template 3 - Compact Professional Style */
+.template3 {
+  background: white;
+  border: 2px solid #333;
+  padding: 0;
+}
+
+.template3-top-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.template3-content {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  flex: 1;
+}
+
+.template3-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.template3-logo-area {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.template3 .college-logo-circle {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+}
+
+.template3-logo-area h2 {
+  color: #667eea;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.template3-logo-area .subtitle {
+  color: #666;
+  font-size: 0.7rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.template3-details-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.template3 .compact-row {
+  display: flex;
+  font-size: 0.75rem;
+}
+
+.template3 .compact-label {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 60px;
+}
+
+.template3 .compact-value {
+  color: #333;
+}
+
+.template3-parent-info {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e9ecef;
+  font-size: 0.7rem;
+}
+
+.template3 .parent-row {
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+.template3-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.template3-photo-wrapper {
+  width: 70px;
+  height: 85px;
+  background: #f0f0f0;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.template3 .student-photo-template3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template3 .photo-placeholder-template3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template3 .photo-icon-template3 {
+  font-size: 2rem;
+  color: #999;
+}
+
+.template3-student-id {
+  text-align: center;
+  background: #667eea;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.template3 .id-label {
+  font-size: 0.6rem;
+  opacity: 0.9;
+  margin-bottom: 0.2rem;
+}
+
+.template3 .id-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.template3-bottom-bar {
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.template3 .barcode-placeholder {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+.template3 .validity-text {
+  font-size: 0.65rem;
+  color: #666;
+}
+
+/* Responsive ID Card Styles */
+@media (max-width: 768px) {
+  .id-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 250px;
+    padding: 1rem;
+  }
+
+  .template1 .id-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .template1 .college-logo {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .template1 .college-info h2 {
+    font-size: 1rem;
+  }
+
+  .template1 .id-card-body {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .template1 .photo-placeholder {
+    width: 70px;
+    height: 90px;
+  }
+
+  .template2-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .template2 .college-logo-large {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .template2 .college-name-large h1 {
+    font-size: 0.85rem;
+  }
+
+  .template2-body {
+    flex-direction: column;
+  }
+
+  .template2-photo-container {
+    width: 80px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .template2-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template3-content {
+    flex-direction: column;
+  }
+
+  .template3-right {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .id-card {
+    padding: 0.75rem;
+  }
+
+  .template1 .detail-row {
+    font-size: 0.75rem;
+  }
+
+  .template2 .info-value {
+    font-size: 0.8rem;
+  }
+
+  .template3 .compact-row {
+    font-size: 0.75rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .id-card {
+    page-break-inside: avoid;
+    margin: 0;
+    box-shadow: none;
+  }
+  
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+}
+

@@ -1,0 +1,286 @@
+.print-id-card {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.id-card-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.id-card-sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.search-section {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.template-selector {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.template-selector h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.template-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.template-options button {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333;
+}
+
+.template-options button:hover {
+  background: #e9ecef;
+  border-color: #667eea;
+}
+
+.template-options button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.student-list h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.loading,
+.no-students {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.student-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.student-item {
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.student-item:hover {
+  background: #e9ecef;
+  border-color: #667eea;
+  transform: translateX(5px);
+}
+
+.student-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.student-item-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.student-item-id {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.student-item-course {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.id-card-preview {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.print-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.print-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.print-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.no-selection {
+  text-align: center;
+  color: #666;
+  padding: 4rem 2rem;
+}
+
+.no-selection-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-selection p {
+  font-size: 1.2rem;
+}
+
+@media print {
+  .id-card-sidebar,
+  .print-actions,
+  .section-header,
+  .app-header {
+    display: none !important;
+  }
+
+  .id-card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .id-card-preview {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .id-card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .id-card-sidebar {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .id-card-sidebar {
+    padding: 1rem;
+    max-height: 350px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .template-selector h3,
+  .student-list h3 {
+    font-size: 1rem;
+  }
+
+  .template-options button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .id-card-preview {
+    padding: 1rem;
+  }
+
+  .print-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .id-card-sidebar {
+    padding: 0.75rem;
+  }
+
+  .student-item {
+    padding: 0.75rem;
+  }
+
+  .student-item-name {
+    font-size: 0.95rem;
+  }
+
+  .student-item-id,
+  .student-item-course {
+    font-size: 0.8rem;
+  }
+
+  .print-button {
+    width: 100%;
+    padding: 0.875rem;
+  }
+}
+
